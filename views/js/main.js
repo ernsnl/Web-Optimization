@@ -443,6 +443,8 @@ var resizePizzas = function(size) {
 
     changeSliderLabel(size);
 
+    // Instead of calculating the width. Assigning and removing classes were much faster.
+    // Giving the classes same properties as the calculations are much easier.
     var allPizzas = document.querySelectorAll(".pizza");
     for (var i = 0; i < allPizzas.length; i++) {
         allPizzas[i].classList.remove("size-1", "size-2", "size-3");
@@ -493,6 +495,8 @@ function updatePositions() {
     window.performance.mark("mark_start_frame");
 
     var items = document.querySelectorAll('.mover');
+    // Problem was while iterating the loop, calculations for the scrollTop were done for each element.
+    // Moving from the loop solves the problem
     var documentScrollTop = (document.body.scrollTop / 1250);
     for (var i = 0; i < items.length; i++) {
         var phase = Math.sin(documentScrollTop + (i % 5));
