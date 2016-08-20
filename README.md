@@ -10,11 +10,12 @@ To achieve what was asked several measures was taken:
  * JavaScript and CSS were moved under the body tag. So, it will not affect the CRP.
  * Async tag is included for some of the JavaScript.
  * Print tag is added to the print.css for avoiding unnecessary loading.
+ * Image were optimized by using compression websites such as [Jpeg-optimizer] (http://jpeg-optimizer.com/) and [tiny-png] (https://tinypng.com/)
 
 2. Getting Rid of the jank
  * Extra style was used to decrease the slider time.
  * In main.js, There was FSL which was resolved.
- * Extra moving pizzas were removed and extra styles were added. 
+ * Extra moving pizzas were removed and extra styles were added.
 
 
 Url of that page is [Here] (https://ernsnl.github.io/Web-Optimization/)
