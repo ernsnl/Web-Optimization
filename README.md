@@ -14,6 +14,7 @@ To achieve what was asked several measures was taken:
 2. Getting Rid of the jank
  * Extra style was used to decrease the slider time.
  * In main.js, There was FSL which was resolved.
+ * Extra moving pizzas were removed and extra styles were added. 
 
 
 Url of that page is [Here] (https://ernsnl.github.io/Web-Optimization/)

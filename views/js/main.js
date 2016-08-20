@@ -518,9 +518,13 @@ window.addEventListener('scroll', updatePositions);
 
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
+    //  To avoid unnecessary moving pizza generation
+    // Get best possible resolution option
     var cols = 8;
     var s = 256;
-    for (var i = 0; i < 200; i++) {
+    var bestResolution = window.screen.availHeight;
+    var maximumPizzaCount = Math.floor( bestResolution / 256) * 8;
+    for (var i = 0; i < maximumPizzaCount; i++) {
         var elem = document.createElement('img');
         elem.className = 'mover';
         elem.src = "images/pizza.png";
